@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JobConnect - Find Your Dream Job</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+<div class="container header-container">
+<h1 class="logo">JobConnect</h1>
+<div class="auth-buttons" id="authButtons">
+<button id="jobSeekerBtn" class="btn">Job Seeker</button>
+<button id="employerBtn" class="btn">Employer</button>
+</div>
+<button id="logoutBtn" class="btn logout-btn hidden">Logout</button>
+</div>
+</header>
+
+<main class="container">
+<!-- Login Form -->
+<div id="loginSection" class="card hidden">
+<h2 id="loginTitle">Login</h2>
+<form id="loginForm" class="form">
+<div class="form-group">
+<label for="username">Username</label>
+<input type="text" id="username" required>
+</div>
+<div class="form-group">
+<label for="password">Password</label>
+<input type="password" id="password" required>
+</div>
+<button type="submit" class="btn primary-btn">Login</button>
+</form>
+</div>
+
+<!-- Job Search & Filters -->
+<div class="card">
+<h2>Find Your Perfect Job</h2>
+<div class="filter-grid">
+<div class="form-group">
+<label for="searchTerm">Search</label>
+<input type="text" id="searchTerm" placeholder="Job title or keyword">
+</div>
+<div class="form-group">
+<label for="location">Location</label>
+<select id="location">
+<option value="">All Locations</option>
+</select>
+</div>
+<div class="form-group">
+<label for="category">Category</label>
+<select id="category">
+<option value="">All Categories</option>
+</select>
+</div>
+<div class="form-group">
+<button id="clearFilters" class="btn secondary-btn">Clear Filters</button>
+</div>
+</div>
+</div>
+
+<!-- Job Listings -->
+<div class="card">
+<h2>Job Listings (<span id="jobCount">0</span>)</h2>
+<div id="jobListings" class="job-list">
+</div>
+</div>
+
+<!-- Employer Job Posting Form -->
+<div id="jobPostingSection" class="card hidden">
+<h2>Post a New Job</h2>
+<form id="postJobForm" class="form">
+<div class="form-grid">
+<div class="form-group">
+<label for="jobTitle">Job Title</label>
+<input type="text" id="jobTitle" required>
+</div>
+<div class="form-group">
+<label for="company">Company</label>
+<input type="text" id="company" required>
+</div>
+<div class="form-group">
+<label for="jobLocation">Location</label>
+<input type="text" id="jobLocation" required>
+</div>
+<div class="form-group">
+<label for="jobCategory">Category</label>
+<input type="text" id="jobCategory" required>
+</div>
+<div class="form-group">
+<label for="salary">Salary Range</label>
+<input type="text" id="salary" required>
+</div>
+</div>
+<div class="form-group">
+<label for="description">Job Description</label>
+<textarea id="description" rows="4" required></textarea>
+</div>
+<button type="submit" class="btn primary-btn">Post Job</button>
+</form>
+</div>
+
+<!-- Admin Panel -->
+<div id="adminPanel" class="card hidden">
+<h2>Admin Panel</h2>
+<div class="stats-container">
+<h3>Statistics</h3>
+<div class="stats-grid">
+<div class="stat-card blue">
+<div class="stat-number" id="totalJobs">0</div>
+<div class="stat-label">Total Jobs</div>
+</div>
+<div class="stat-card green">
+<div class="stat-number" id="totalCategories">0</div>
+<div class="stat-label">Categories</div>
+</div>
+<div class="stat-card purple">
+<div class="stat-number" id="totalLocations">0</div>
+<div class="stat-label">Locations</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<!-- Application Modal -->
+<div id="applicationModal" class="modal hidden">
+<div class="modal-content">
+<h2 id="applicationTitle">Apply for Job</h2>
+<form id="applicationForm" class="form">
+<div class="form-group">
+<label for="fullName">Full Name</label>
+<input type="text" id="fullName" required>
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" required>
+</div>
+<div class="form-group">
+<label for="resumeLink">Resume Link</label>
+<input type="url" id="resumeLink" required>
+</div>
+<div class="form-group">
+<label for="coverLetter">Cover Letter</label>
+<textarea id="coverLetter" rows="4" required></textarea>
+</div>
+<div class="modal-buttons">
+<button type="button" id="cancelApplication" class="btn secondary-btn">Cancel</button>
+<button type="submit" class="btn primary-btn">Submit Application</button>
+</div>
+</form>
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<p>© 2025 JobConnect - All rights reserved</p>
+</div>
+</footer>
+
+<script src="hi.js"></script>
+</body>
+</html>
